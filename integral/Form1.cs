@@ -36,5 +36,10 @@ namespace integral
         {
 
         }
+
+        private void integral__Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

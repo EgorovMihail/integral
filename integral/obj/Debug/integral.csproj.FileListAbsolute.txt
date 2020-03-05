@@ -1,0 +1,10 @@
+C:\Users\Владислав\Desktop\C#\labs\integral\integral\bin\Debug\integral.exe.config
+C:\Users\Владислав\Desktop\C#\labs\integral\integral\bin\Debug\integral.exe
+C:\Users\Владислав\Desktop\C#\labs\integral\integral\bin\Debug\integral.pdb
+C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral.csprojAssemblyReference.cache
+C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral.integral__Form.resources
+C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral.Properties.Resources.resources
+C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral.csproj.GenerateResource.cache
+C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral.csproj.CoreCompileInputs.cache
+C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral.exe
+C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral.pdb
