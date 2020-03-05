@@ -29,160 +29,188 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(integral__Form));
-            this.res__simpson = new System.Windows.Forms.Button();
-            this.border__b = new System.Windows.Forms.TextBox();
-            this.border__a = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.res__trapeze = new System.Windows.Forms.Button();
-            this.time__simpson = new System.Windows.Forms.TextBox();
-            this.time__trapeze = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.res__out__simpson = new System.Windows.Forms.TextBox();
-            this.res__out__trapeze = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.border__b = new System.Windows.Forms.TextBox();
+            this.border__a = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.eTrap = new System.Windows.Forms.Label();
+            this.eSims = new System.Windows.Forms.Label();
+            this.Trap_out = new System.Windows.Forms.Label();
+            this.Sims_out = new System.Windows.Forms.Label();
+            this.hints = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // res__simpson
+            // label5
             // 
-            this.res__simpson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.res__simpson.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.res__simpson.ForeColor = System.Drawing.Color.Black;
-            this.res__simpson.Location = new System.Drawing.Point(227, 289);
-            this.res__simpson.Name = "res__simpson";
-            this.res__simpson.Size = new System.Drawing.Size(208, 48);
-            this.res__simpson.TabIndex = 0;
-            this.res__simpson.Text = "Трапеции";
-            this.res__simpson.UseVisualStyleBackColor = false;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(23, 153);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "трапеции";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(25, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Симпсон";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // border__b
             // 
             this.border__b.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.border__b.Location = new System.Drawing.Point(275, 61);
+            this.border__b.Location = new System.Drawing.Point(112, 57);
             this.border__b.Name = "border__b";
-            this.border__b.Size = new System.Drawing.Size(127, 23);
+            this.border__b.Size = new System.Drawing.Size(143, 23);
             this.border__b.TabIndex = 2;
+            this.border__b.TextChanged += new System.EventHandler(this.border__b_TextChanged);
             // 
             // border__a
             // 
             this.border__a.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.border__a.Location = new System.Drawing.Point(275, 33);
+            this.border__a.Location = new System.Drawing.Point(112, 29);
             this.border__a.Name = "border__a";
-            this.border__a.Size = new System.Drawing.Size(127, 23);
+            this.border__a.Size = new System.Drawing.Size(143, 23);
             this.border__a.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(8, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Верхняя граница интегрирования";
+            this.border__a.TextChanged += new System.EventHandler(this.border__a_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(8, 64);
+            this.label2.Location = new System.Drawing.Point(37, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 17);
+            this.label2.Size = new System.Drawing.Size(65, 17);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Нижняя граница интегрирования";
+            this.label2.Text = "Нижняя";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // res__trapeze
+            // label1
             // 
-            this.res__trapeze.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.res__trapeze.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.res__trapeze.ForeColor = System.Drawing.Color.Black;
-            this.res__trapeze.Location = new System.Drawing.Point(16, 289);
-            this.res__trapeze.Name = "res__trapeze";
-            this.res__trapeze.Size = new System.Drawing.Size(205, 48);
-            this.res__trapeze.TabIndex = 8;
-            this.res__trapeze.Text = "Симпсон";
-            this.res__trapeze.UseVisualStyleBackColor = false;
-            // 
-            // time__simpson
-            // 
-            this.time__simpson.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time__simpson.ForeColor = System.Drawing.Color.Blue;
-            this.time__simpson.Location = new System.Drawing.Point(16, 468);
-            this.time__simpson.Name = "time__simpson";
-            this.time__simpson.Size = new System.Drawing.Size(204, 23);
-            this.time__simpson.TabIndex = 11;
-            this.time__simpson.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
-            // time__trapeze
-            // 
-            this.time__trapeze.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time__trapeze.ForeColor = System.Drawing.Color.Blue;
-            this.time__trapeze.Location = new System.Drawing.Point(227, 468);
-            this.time__trapeze.Name = "time__trapeze";
-            this.time__trapeze.Size = new System.Drawing.Size(208, 23);
-            this.time__trapeze.TabIndex = 12;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(32, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Верхняя";
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.border__a);
             this.groupBox1.Controls.Add(this.border__b);
             this.groupBox1.Location = new System.Drawing.Point(16, 169);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 100);
+            this.groupBox1.Size = new System.Drawing.Size(310, 100);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "границы интегрирования";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // res__out__simpson
+            // label4
             // 
-            this.res__out__simpson.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.res__out__simpson.Location = new System.Drawing.Point(15, 393);
-            this.res__out__simpson.Margin = new System.Windows.Forms.Padding(2);
-            this.res__out__simpson.Name = "res__out__simpson";
-            this.res__out__simpson.Size = new System.Drawing.Size(205, 23);
-            this.res__out__simpson.TabIndex = 13;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(179, 317);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.TabIndex = 16;
             // 
-            // res__out__trapeze
+            // groupBox2
             // 
-            this.res__out__trapeze.BackColor = System.Drawing.Color.White;
-            this.res__out__trapeze.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.res__out__trapeze.Location = new System.Drawing.Point(227, 393);
-            this.res__out__trapeze.Margin = new System.Windows.Forms.Padding(2);
-            this.res__out__trapeze.Name = "res__out__trapeze";
-            this.res__out__trapeze.Size = new System.Drawing.Size(208, 23);
-            this.res__out__trapeze.TabIndex = 14;
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.groupBox2.Controls.Add(this.eTrap);
+            this.groupBox2.Controls.Add(this.eSims);
+            this.groupBox2.Controls.Add(this.Trap_out);
+            this.groupBox2.Controls.Add(this.Sims_out);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(16, 293);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(310, 271);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "результаты вычислений";
             // 
-            // label5
+            // eTrap
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(194, 438);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 17);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "время";
+            this.eTrap.AutoSize = true;
+            this.eTrap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.eTrap.Location = new System.Drawing.Point(61, 232);
+            this.eTrap.Name = "eTrap";
+            this.eTrap.Size = new System.Drawing.Size(25, 16);
+            this.eTrap.TabIndex = 11;
+            this.eTrap.Text = "0.0";
             // 
-            // label3
+            // eSims
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(172, 364);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "результаты";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.eSims.AutoSize = true;
+            this.eSims.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.eSims.Location = new System.Drawing.Point(63, 116);
+            this.eSims.Name = "eSims";
+            this.eSims.Size = new System.Drawing.Size(25, 16);
+            this.eSims.TabIndex = 11;
+            this.eSims.Text = "0.0";
+            this.eSims.Click += new System.EventHandler(this.SimsT_out_Click);
+            // 
+            // Trap_out
+            // 
+            this.Trap_out.AutoSize = true;
+            this.Trap_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Trap_out.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Trap_out.ForeColor = System.Drawing.Color.Black;
+            this.Trap_out.Location = new System.Drawing.Point(57, 181);
+            this.Trap_out.Name = "Trap_out";
+            this.Trap_out.Size = new System.Drawing.Size(65, 40);
+            this.Trap_out.TabIndex = 10;
+            this.Trap_out.Text = "0.0";
+            // 
+            // Sims_out
+            // 
+            this.Sims_out.AutoSize = true;
+            this.Sims_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sims_out.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Sims_out.ForeColor = System.Drawing.Color.Black;
+            this.Sims_out.Location = new System.Drawing.Point(59, 63);
+            this.Sims_out.Name = "Sims_out";
+            this.Sims_out.Size = new System.Drawing.Size(65, 40);
+            this.Sims_out.TabIndex = 10;
+            this.Sims_out.Text = "0.0";
+            // 
+            // hints
+            // 
+            this.hints.AutoSize = true;
+            this.hints.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.hints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hints.ForeColor = System.Drawing.Color.Black;
+            this.hints.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.hints.Location = new System.Drawing.Point(499, 9);
+            this.hints.Name = "hints";
+            this.hints.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.hints.Size = new System.Drawing.Size(323, 20);
+            this.hints.TabIndex = 18;
+            this.hints.Text = "введите параметры интегрирования";
+            this.hints.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // integral__Form
             // 
@@ -190,15 +218,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(834, 576);
+            this.Controls.Add(this.hints);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.res__out__trapeze);
-            this.Controls.Add(this.res__out__simpson);
-            this.Controls.Add(this.time__trapeze);
-            this.Controls.Add(this.time__simpson);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.res__trapeze);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.res__simpson);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "integral__Form";
@@ -207,26 +231,28 @@
             this.Load += new System.EventHandler(this.integral__Form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button res__simpson;
-        private System.Windows.Forms.TextBox border__b;
-        private System.Windows.Forms.TextBox border__a;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button res__trapeze;
-        private System.Windows.Forms.TextBox time__simpson;
-        private System.Windows.Forms.TextBox time__trapeze;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox res__out__simpson;
-        private System.Windows.Forms.TextBox res__out__trapeze;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox border__b;
+        private System.Windows.Forms.TextBox border__a;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label eTrap;
+        private System.Windows.Forms.Label eSims;
+        private System.Windows.Forms.Label Trap_out;
+        private System.Windows.Forms.Label Sims_out;
+        private System.Windows.Forms.Label hints;
     }
 }
 

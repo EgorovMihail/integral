@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace integral
 {
-    interface Integral
+    interface IMath
     {
-
+        double Trap(double a, double b, double h);
+        //double Sims(double a, double b, double h);
     }
 }
