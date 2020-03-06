@@ -17,6 +17,31 @@ namespace integral
             InitializeComponent();
         }
 
+        private void Trap()
+        {
+            if ((border__b.Text != "") && (border__a.Text != "") && (step_in.Text != ""))
+            {
+                Task p = new Task();
+
+                double a = Convert.ToDouble(border__a.Text);
+                double b = Convert.ToDouble(border__b.Text);
+                double h = Convert.ToDouble(step_in.Text);
+
+                DateTime t1 = DateTime.Now;
+
+                Trap_out.Text = Convert.ToString(Math.Round(p.Trap(a, b, h), 3));
+
+                TimeSpan time = DateTime.Now - t1;
+                eTrap.Text = Convert.ToString(time.TotalSeconds) + " сек";
+
+                hints.Text = "котик доволен ;)";
+            }
+            else
+            {
+                hints.Text = "введите параметры интегрирования";
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -49,42 +74,17 @@ namespace integral
 
         private void border__a_TextChanged(object sender, EventArgs e)
         {
-            if ((border__b.Text != "") && (border__a.Text != ""))
-            {
-                Task p = new Task();
-
-                double a = Convert.ToDouble(border__a.Text);
-                double b = Convert.ToDouble(border__b.Text);
-                double h = 0.1;
-
-                Trap_out.Text = Convert.ToString(Math.Round(p.Trap(a, b, h), 3));
-
-                hints.Text = "котик доволен ;)";
-            }
-            else
-            {
-                hints.Text = "введите параметры интегрирования";
-            }
+            Trap();
         }
 
         private void border__b_TextChanged(object sender, EventArgs e)
         {
-            if ((border__a.Text != "") && (border__b.Text != ""))
-            {
-                Task p = new Task();
+            Trap();
+        }
 
-                double a = Convert.ToDouble(border__a.Text);
-                double b = Convert.ToDouble(border__b.Text);
-                double h = 0.1;
-
-                Trap_out.Text = Convert.ToString(Math.Round(p.Trap(a, b, h), 3));
-
-                hints.Text = "котик доволен ;)";
-            }
-            else
-            {
-                hints.Text = "Введите параметры интегрирования";
-            }
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
+        {
+            Trap();
         }
     }
 }
