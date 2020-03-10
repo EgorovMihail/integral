@@ -26,6 +26,7 @@ namespace integral
                 double a = Convert.ToDouble(border__a.Text);
                 double b = Convert.ToDouble(border__b.Text);
                 double h = Convert.ToDouble(step_in.Text);
+                
 
                 DateTime t1 = DateTime.Now;
 
@@ -33,6 +34,32 @@ namespace integral
 
                 TimeSpan time = DateTime.Now - t1;
                 eTrap.Text = Convert.ToString(time.TotalSeconds) + " сек";
+
+                hints.Text = "котик доволен ;)";
+            }
+            else
+            {
+                hints.Text = "введите параметры интегрирования";
+            }
+        }
+
+
+        private void Sims()
+        {       
+            if ((border__b.Text != "") && (border__a.Text != "") && (iter.Text != ""))
+            {
+                Task q = new Task();
+
+                double a = Convert.ToDouble(border__a.Text);
+                double b = Convert.ToDouble(border__b.Text);
+                double m = Convert.ToDouble(iter.Text);
+
+                DateTime t1 = DateTime.Now;
+
+                Sims_out.Text = Convert.ToString(Math.Round(q.Sims(a, b, m), 3));
+
+                TimeSpan time = DateTime.Now - t1;
+                eSims.Text = Convert.ToString(time.TotalSeconds) + " сек";
 
                 hints.Text = "котик доволен ;)";
             }
@@ -80,11 +107,19 @@ namespace integral
         private void border__b_TextChanged(object sender, EventArgs e)
         {
             Trap();
+            Sims();
         }
 
         private void textBox1_TextChanged_2(object sender, EventArgs e)
         {
             Trap();
+            Sims();
         }
+
+        private void Sims_out_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }

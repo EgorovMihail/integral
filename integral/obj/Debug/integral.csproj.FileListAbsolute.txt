@@ -8,3 +8,12 @@ C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral
 C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral.csproj.CoreCompileInputs.cache
 C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral.exe
 C:\Users\Владислав\Desktop\C#\labs\integral\integral\obj\Debug\integral.pdb
+D:\3_kurs_2_semestr\Arhitectyra\C#\integral\integral\integral\obj\Debug\integral.csprojAssemblyReference.cache
+D:\3_kurs_2_semestr\Arhitectyra\C#\integral\integral\integral\obj\Debug\integral.integral__Form.resources
+D:\3_kurs_2_semestr\Arhitectyra\C#\integral\integral\integral\obj\Debug\integral.Properties.Resources.resources
+D:\3_kurs_2_semestr\Arhitectyra\C#\integral\integral\integral\obj\Debug\integral.csproj.GenerateResource.cache
+D:\3_kurs_2_semestr\Arhitectyra\C#\integral\integral\integral\obj\Debug\integral.exe
+D:\3_kurs_2_semestr\Arhitectyra\C#\integral\integral\integral\obj\Debug\integral.pdb
+D:\3_kurs_2_semestr\Arhitectyra\C#\integral\integral\integral\bin\Debug\integral.exe.config
+D:\3_kurs_2_semestr\Arhitectyra\C#\integral\integral\integral\bin\Debug\integral.exe
+D:\3_kurs_2_semestr\Arhitectyra\C#\integral\integral\integral\bin\Debug\integral.pdb
