@@ -10,12 +10,12 @@ namespace integral
     {
         private double func(double x)
         {
-            return 2.0 * x - Math.Log(2.0 * x) + 234;
+            return 2 * x - Math.Log(2 * x) + 234;
         }
 
         public double Trap(double a, double b, double h)
         {
-            double sum_x = 0.0;
+            double sum_x = 0;
             int n = (int)((b - a) / h);
 
             for (int i = 1; i < n; i++)
@@ -23,12 +23,15 @@ namespace integral
                 sum_x += func(a + i * h); 
             }
 
-            return (b - a) / h * ((func(a) + func(b)) / 2.0 + sum_x);
+            sum_x += (func(a) + func(b)) / 2;
+            sum_x *= h;
+
+            return sum_x;
         }
 
         public double Sims(double A, double B, double M)
         {
-            double h = (B - A) / (M - 1);//шаг
+            double h = (B - A) / (M - 1); //шаг
             double x = A;
             double I = func(A) + func(B);
             int n = 0;
@@ -48,28 +51,3 @@ namespace integral
         }
     }
 }
-
-
-/*double gr__a = Convert.ToDouble(gr__A.Text);//взяли данные из формы(нижняя граница)
-double gr__b = Convert.ToDouble(gr__A.Text);//взяли данные из формы(верхняя граница)
-double m = Convert.ToDouble(M.Text);//возможно кол во итераций????
-
-
-double h = (gr__b - gr__a) / (m - 1);//шаг
-double x = gr__a;
-double I = function(gr__a) + function(gr__b);
-int n = 0;
-
-while (n < m - 2)
-{
-
-x = x + h;
-
-if (n % 2 == 0) I = I + 4 * function(x);
-else I = I + 2 * function(x);
-n++;
-
-}
-
-double Res = I * (h / 3);
-res.Text = Convert.ToString(Res);*/

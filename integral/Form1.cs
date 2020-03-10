@@ -23,10 +23,9 @@ namespace integral
             {
                 Task p = new Task();
 
-                double a = Convert.ToDouble(border__b.Text);
-                double b = Convert.ToDouble(border__a.Text);
-                double h = Convert.ToDouble(step_in.Text);
-                
+                double a = Convert.ToDouble(border__a.Text);
+                double b = Convert.ToDouble(border__b.Text);
+                double h = Convert.ToDouble(step_in.Text);  
 
                 DateTime t1 = DateTime.Now;
 
