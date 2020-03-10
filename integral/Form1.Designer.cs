@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(integral__Form));
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.border__b = new System.Windows.Forms.TextBox();
             this.border__a = new System.Windows.Forms.TextBox();
+            this.border__b = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -81,24 +81,24 @@
             this.label3.Text = "Симпсон";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // border__b
-            // 
-            this.border__b.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.border__b.Location = new System.Drawing.Point(149, 70);
-            this.border__b.Margin = new System.Windows.Forms.Padding(4);
-            this.border__b.Name = "border__b";
-            this.border__b.Size = new System.Drawing.Size(189, 26);
-            this.border__b.TabIndex = 2;
-            this.border__b.TextChanged += new System.EventHandler(this.border__b_TextChanged);
-            // 
             // border__a
             // 
             this.border__a.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.border__a.Location = new System.Drawing.Point(149, 36);
+            this.border__a.Location = new System.Drawing.Point(149, 70);
             this.border__a.Margin = new System.Windows.Forms.Padding(4);
             this.border__a.Name = "border__a";
             this.border__a.Size = new System.Drawing.Size(189, 26);
-            this.border__a.TabIndex = 3;
+            this.border__a.TabIndex = 2;
+            this.border__a.TextChanged += new System.EventHandler(this.border__b_TextChanged);
+            // 
+            // border__b
+            // 
+            this.border__b.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.border__b.Location = new System.Drawing.Point(149, 36);
+            this.border__b.Margin = new System.Windows.Forms.Padding(4);
+            this.border__b.Name = "border__b";
+            this.border__b.Size = new System.Drawing.Size(189, 26);
+            this.border__b.TabIndex = 3;
             // 
             // label2
             // 
@@ -134,8 +134,8 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.border__a);
             this.groupBox1.Controls.Add(this.border__b);
+            this.groupBox1.Controls.Add(this.border__a);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(13, 76);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -342,8 +342,8 @@
         #endregion
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox border__b;
         private System.Windows.Forms.TextBox border__a;
+        private System.Windows.Forms.TextBox border__b;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;

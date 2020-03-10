@@ -19,12 +19,12 @@ namespace integral
 
         private void Trap()
         {
-            if ((border__b.Text != "") && (border__a.Text != "") && (step_in.Text != ""))
+            if ((border__a.Text != "") && (border__b.Text != "") && (step_in.Text != ""))
             {
                 Task p = new Task();
 
-                double a = Convert.ToDouble(border__a.Text);
-                double b = Convert.ToDouble(border__b.Text);
+                double a = Convert.ToDouble(border__b.Text);
+                double b = Convert.ToDouble(border__a.Text);
                 double h = Convert.ToDouble(step_in.Text);
                 
 
@@ -46,7 +46,7 @@ namespace integral
 
         private void Sims()
         {       
-            if ((border__b.Text != "") && (border__a.Text != "") && (iter.Text != ""))
+            if ((border__a.Text != "") && (border__b.Text != "") && (iter.Text != ""))
             {
                 Task q = new Task();
 

@@ -28,12 +28,12 @@ namespace integral
 
         public double Sims(double A, double B, double M)
         {
-            double h = (A - B) / (M - 1);//шаг
+            double h = (B - A) / (M - 1);//шаг
             double x = A;
             double I = func(A) + func(B);
             int n = 0;
 
-            while (n < M)
+            while (n < M-2)
             {
 
                 x = x + h;
