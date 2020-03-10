@@ -18,12 +18,12 @@ namespace integral
             double sum_x = 0.0;
             int n = (int)((b - a) / h);
 
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i < n; i++)
             {
                 sum_x += func(a + i * h); 
             }
 
-            return h / 2.0 * (func(a) + 2.0 * sum_x + func(b));
+            return (b - a) / h * ((func(a) + func(b)) / 2.0 + sum_x);
         }
 
         public double Sims(double A, double B, double M)

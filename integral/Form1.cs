@@ -101,7 +101,6 @@ namespace integral
 
         private void border__a_TextChanged(object sender, EventArgs e)
         {
-            Trap();
         }
 
         private void border__b_TextChanged(object sender, EventArgs e)
@@ -113,7 +112,6 @@ namespace integral
         private void textBox1_TextChanged_2(object sender, EventArgs e)
         {
             Trap();
-            Sims();
         }
 
         private void Sims_out_TextChanged(object sender, EventArgs e)
@@ -121,5 +119,15 @@ namespace integral
             
         }
 
+        private void iter_TextChanged(object sender, EventArgs e)
+        {
+            Sims();
+        }
+
+        private void border__a_TextChanged_1(object sender, EventArgs e)
+        {
+            Trap();
+            Sims();
+        }
     }
 }
