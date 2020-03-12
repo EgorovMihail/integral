@@ -21,7 +21,7 @@ namespace integral
         {
             if ((border__a.Text != "") && (border__b.Text != "") && (step_in.Text != ""))
             {
-                Task p = new Task();
+                IntegralMath p = new IntegralMath();
 
                 double a = Convert.ToDouble(border__a.Text);
                 double b = Convert.ToDouble(border__b.Text);
@@ -29,7 +29,7 @@ namespace integral
 
                 DateTime t1 = DateTime.Now;
 
-                Trap_out.Text = Convert.ToString(Math.Round(p.Trap(a, b, h), 3));
+                Trap_out.Text = Convert.ToString(Math.Round(p.Trap(a, b, h, x => 2 * x - Math.Log(2 * x) + 234), 3));
 
                 TimeSpan time = DateTime.Now - t1;
                 eTrap.Text = Convert.ToString(time.TotalSeconds) + " сек";
@@ -47,15 +47,15 @@ namespace integral
         {       
             if ((border__a.Text != "") && (border__b.Text != "") && (iter.Text != ""))
             {
-                Task q = new Task();
+                IntegralMath q = new IntegralMath();
 
                 double a = Convert.ToDouble(border__a.Text);
                 double b = Convert.ToDouble(border__b.Text);
-                double m = Convert.ToDouble(iter.Text);
+                int m = Convert.ToInt32(iter.Text);
 
                 DateTime t1 = DateTime.Now;
 
-                Sims_out.Text = Convert.ToString(Math.Round(q.Sims(a, b, m), 3));
+                Sims_out.Text = Convert.ToString(Math.Round(q.Sims(a, b, m, x => 2 * x - Math.Log(2 * x) + 234), 3));
 
                 TimeSpan time = DateTime.Now - t1;
                 eSims.Text = Convert.ToString(time.TotalSeconds) + " сек";

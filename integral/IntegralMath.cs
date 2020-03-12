@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace integral
 {
-    class Task: IMath
+    public class IntegralMath: IMath
     {
-        private double func(double x)
-        {
-            return 2 * x - Math.Log(2 * x) + 234;
-        }
+        //private double func(double x)
+        //{
+        //    return 2 * x - Math.Log(2 * x) + 234;
+        //}
 
-        public double Trap(double a, double b, double h)
+        public double Trap(double a, double b, double h, Func<double, double> func)
         {
             double sum_x = 0;
             int n = (int)((b - a) / h);
@@ -29,8 +29,13 @@ namespace integral
             return sum_x;
         }
 
-        public double Sims(double A, double B, double M)
+        public double Sims(double A, double B, int M, Func<double, double> func)
         {
+            if (M <= 0)
+            {
+                throw new ArgumentException();
+
+            }
             double h = (B - A) / (M - 1); //шаг
             double x = A;
             double I = func(A) + func(B);
