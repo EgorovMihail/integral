@@ -8,13 +8,23 @@ namespace integral
 {
     public class IntegralMath: IMath
     {
-        //private double func(double x)
-        //{
-        //    return 2 * x - Math.Log(2 * x) + 234;
-        //}
+
+        // Метод Трапеции 
 
         public double Trap(double a, double b, double h, Func<double, double> func)
         {
+            if (h < 0)
+            {
+                throw new ArgumentException();
+
+            }
+
+            if (h > 0.1)
+            {
+                throw new ArgumentException();
+            }
+
+
             double sum_x = 0;
             int n = (int)((b - a) / h);
 
@@ -29,19 +39,27 @@ namespace integral
             return sum_x;
         }
 
+
+        // Метод Симпсона
+        
         public double Sims(double A, double B, int M, Func<double, double> func)
         {
             if (M <= 0)
             {
                 throw new ArgumentException();
-
             }
-            double h = (B - A) / (M - 1); //шаг
+
+            if (M > 1000000)
+            {
+                throw new ArgumentException();
+            }
+
+            double h = (B - A) / (M); //шаг
             double x = A;
             double I = func(A) + func(B);
             int n = 0;
 
-            while (n < M-2)
+            while (n < M-1)
             {
 
                 x = x + h;
