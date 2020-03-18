@@ -13,27 +13,27 @@ namespace integral
 
         public double Trap(double a, double b, double h, Func<double, double> func)
         {
-            if (h < 0)
+            if (h < 0.0)
             {
                 throw new ArgumentException();
 
             }
 
-            if (h > 0.1)
+            if (h > 1.0)
             {
                 throw new ArgumentException();
             }
 
 
-            double sum_x = 0;
-            int n = (int)((b - a) / h);
+            double sum_x = 0.0;
+            int n = (int)(Math.Abs(b - a) / h);
 
             for (int i = 1; i < n; i++)
             {
                 sum_x += func(a + i * h); 
             }
 
-            sum_x += (func(a) + func(b)) / 2;
+            sum_x += (func(a) + func(b)) / 2.0;
             sum_x *= h;
 
             return sum_x;
@@ -49,12 +49,12 @@ namespace integral
                 throw new ArgumentException();
             }
 
-            if (M > 1000000)
+            if (M > 10000000)
             {
                 throw new ArgumentException();
             }
 
-            double h = (B - A) / (M); //шаг
+            double h = Math.Abs(B - A) / M; //шаг
             double x = A;
             double I = func(A) + func(B);
             int n = 0;

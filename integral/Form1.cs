@@ -22,23 +22,35 @@ namespace integral
             if ((border__a.Text != "") && (border__b.Text != "") && (step_in.Text != ""))
             {
                 IntegralMath p = new IntegralMath();
+                double num1, num2, num3;
 
-                double a = Convert.ToDouble(border__a.Text);
-                double b = Convert.ToDouble(border__b.Text);
-                double h = Convert.ToDouble(step_in.Text);  
+                string a = border__a.Text;
+                string b = border__b.Text;
+                string h = step_in.Text;
 
-                DateTime t1 = DateTime.Now;
+                bool AisNum = double.TryParse(a, out num1);
+                bool BisNum = double.TryParse(b, out num2);
+                bool HisNum = double.TryParse(h, out num3);
 
-                Trap_out.Text = Convert.ToString(Math.Round(p.Trap(a, b, h, x => 2 * x - Math.Log(2 * x) + 234), 3));
+                if ((AisNum) && (BisNum) && (HisNum) && (num1 <= num2) && (num3 >= 0.0) && (num1 > 0.0))
+                { 
+                    DateTime t1 = DateTime.Now;
 
-                TimeSpan time = DateTime.Now - t1;
-                eTrap.Text = Convert.ToString(time.TotalSeconds) + " сек";
+                    Trap_out.Text = Convert.ToString(Math.Round(p.Trap(num1, num2, num3, x => 2.0 * x - Math.Log(2.0 * x) + 234.0), 3));
 
-                hints.Text = "котик доволен ;)";
+                    TimeSpan time = DateTime.Now - t1;
+                    eTrap.Text = Convert.ToString(time.TotalSeconds) + " сек";
+
+                    hints.Text = "котик доволен ;)";
+                }
+                else
+                {
+                    hints.Text = "Проверьте корректность введенных данных";
+                } 
             }
             else
             {
-                hints.Text = "введите параметры интегрирования";
+                hints.Text = "Введите параметры интегрирования";
             }
         }
 
@@ -48,34 +60,35 @@ namespace integral
             if ((border__a.Text != "") && (border__b.Text != "") && (iter.Text != ""))
             {
                 IntegralMath q = new IntegralMath();
+                double num1, num2; int num3;
 
-                double a = Convert.ToDouble(border__a.Text);
-                double b = Convert.ToDouble(border__b.Text);
-                int m = Convert.ToInt32(iter.Text);
+                string a = border__a.Text;
+                string b = border__b.Text;
+                string m = iter.Text;
 
-                DateTime t1 = DateTime.Now;
+                bool AisNum = double.TryParse(a, out num1);
+                bool BisNum = double.TryParse(b, out num2);
+                bool MisNum = int.TryParse(m, out num3);
 
-                Sims_out.Text = Convert.ToString(Math.Round(q.Sims(a, b, m, x => 2 * x - Math.Log(2 * x) + 234), 3));
+                if ((AisNum) && (BisNum) && (MisNum) && (num1 <= num2) && (num3 > 0) && (num1 > 0.0))
+                {
+                    DateTime t1 = DateTime.Now;
 
-                TimeSpan time = DateTime.Now - t1;
-                eSims.Text = Convert.ToString(time.TotalSeconds) + " сек";
+                    Sims_out.Text = Convert.ToString(Math.Round(q.Sims(num1, num2, num3, x => 2.0 * x - Math.Log(2.0 * x) + 234.0), 3));
 
-                hints.Text = "котик доволен ;)";
+                    TimeSpan time = DateTime.Now - t1;
+                    eSims.Text = Convert.ToString(time.TotalSeconds) + " сек";
+
+                    hints.Text = "котик доволен ;)";
+                }
+                else {
+                    hints.Text = "Проверьте корректность введенных данных";
+                }
             }
             else
             {
-                hints.Text = "введите параметры интегрирования";
+                hints.Text = "Введите параметры интегрирования";
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -96,10 +109,6 @@ namespace integral
         private void SimsT_out_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void border__a_TextChanged(object sender, EventArgs e)
-        {
         }
 
         private void border__b_TextChanged(object sender, EventArgs e)

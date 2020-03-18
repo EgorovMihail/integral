@@ -9,7 +9,7 @@ namespace UnitTestIntegral
         // Trap method
         //проверка на точность метода траеций
         [TestMethod]
-        public void TestTrap_xXx()
+        public void TrapMethod_XmultiplyX_2666Returned()
         {
             //assert 
             Func<double, double> func = x => x * x;
@@ -28,7 +28,7 @@ namespace UnitTestIntegral
 
         //проверка на точность метода траеций
         [TestMethod]
-        public void TestTrap_2x()
+        public void TrapMethod_2X_400Returned()
         {
             //assert 
             Func<double, double> func = x => x * 2;
@@ -46,12 +46,10 @@ namespace UnitTestIntegral
 
         }
 
-
-        // Simpson's method
         //проверка на точность метода симпсона
 
         [TestMethod]
-        public void TestSimpson_xXx()
+        public void SimsMethod_XmultiplyX_2666Returned()
         {
             //assert 
             Func<double, double> func = x => x * x;
@@ -72,7 +70,7 @@ namespace UnitTestIntegral
         //проверка на точность метода симпсона
 
         [TestMethod]
-        public void TestSimpson_2x()
+        public void SimsMethod_2X_400Returned()
         {
             //assert 
             Func<double, double> func = x => 2 * x;
@@ -89,11 +87,11 @@ namespace UnitTestIntegral
             Assert.AreEqual(correct_res, res, 0.0001);
         }
 
-        //ввод отрцательного кол-во итераций
+        //ввод отрицательного кол-ва итераций
         [TestMethod]
 
         [ExpectedException(typeof(ArgumentException))]
-        public void TestSimpson_iter_bad()
+        public void SimpsonMethod_InvalidIterationCount_Exception()
         {
             //assert 
             Func<double, double> func = x => x * x;
@@ -110,7 +108,7 @@ namespace UnitTestIntegral
         [TestMethod]
 
         [ExpectedException(typeof(ArgumentException))]
-        public void TestTrap_step_bad()
+        public void TrapMethod_InvalidStride_Exception()
         {
             //assert 
             Func<double, double> func = x => x * x;
@@ -124,39 +122,21 @@ namespace UnitTestIntegral
 
         }
 
-        //ввод большого кол во итераций
+        //ввод большого кол-ва итераций
         [TestMethod]
 
         [ExpectedException(typeof(ArgumentException))]
-        public void TestSims_big_iter()
+        public void SimsMethod_MaxIterationNumber_Exception()
         {
             //assert 
             Func<double, double> func = x => x * x;
             double a = 0;
             double b = 20;
-            int  m = 100000000;
+            int m = 100000000;
 
             //act
             IMath math = new IntegralMath();
             double res = math.Sims(a, b, m, func);
-
-        }
-
-        //ввод большого точности 
-        [TestMethod]
-
-        [ExpectedException(typeof(ArgumentException))]
-        public void TestTrap_big_step()
-        {
-            //assert 
-            Func<double, double> func = x => x * x;
-            double a = 0;
-            double b = 20;
-            double h = 1;
-
-            //act
-            IMath math = new IntegralMath();
-            double res = math.Trap(a, b, h, func);
         }
     }
 }

@@ -83,7 +83,7 @@
             // 
             this.border__a.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.border__a.Location = new System.Drawing.Point(120, 55);
-            this.border__a.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.border__a.Margin = new System.Windows.Forms.Padding(4);
             this.border__a.Name = "border__a";
             this.border__a.Size = new System.Drawing.Size(100, 23);
             this.border__a.TabIndex = 2;
@@ -93,10 +93,11 @@
             // 
             this.border__b.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.border__b.Location = new System.Drawing.Point(120, 24);
-            this.border__b.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.border__b.Margin = new System.Windows.Forms.Padding(4);
             this.border__b.Name = "border__b";
             this.border__b.Size = new System.Drawing.Size(100, 23);
             this.border__b.TabIndex = 3;
+            this.border__b.TextChanged += new System.EventHandler(this.border__a_TextChanged_1);
             // 
             // label2
             // 
@@ -285,7 +286,7 @@
             // 
             this.pictureBox1.Image = global::integral.Properties.Resources.интеграл2;
             this.pictureBox1.Location = new System.Drawing.Point(584, 31);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(249, 62);
             this.pictureBox1.TabIndex = 21;
